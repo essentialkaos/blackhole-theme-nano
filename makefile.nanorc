@@ -1,0 +1,17 @@
+## MAKEFILE
+
+syntax "makefile" "Makefile[^/]*$" "\.(make|mk)$"
+magic "makefile script"
+comment "#"
+
+color brightwhite "[:=]"
+color brightwhite "\<(if|ifeq|else|endif)\>"
+color green "\$+[{(][a-zA-Z0-9_-]+[})]"
+color blue "^[^ 	]+:"
+color red "@[a-zA-Z0-9_-]+"
+
+# Comments
+color brightblack "(^|[[:space:]]+)#.*"
+
+## Trailing whitespace
+color ,black "[[:space:]]+$"

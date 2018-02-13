@@ -1,0 +1,30 @@
+## HTML
+
+syntax "html" "\.html?$"
+magic "HTML document"
+comment "<!--|-->"
+
+# Tags
+color green "<[[:alpha:]/!?][^>]*>"
+
+# Bold, italic, and underlined
+color brightwhite "</?[biu]>"
+
+# Named character references
+color cyan "&[^;[:space:]]*;"
+
+# Strings
+color yellow ""(\\.|[^"])*""
+
+# Attributes
+color brightwhite "(abbr|accept(-charset)?|accesskey|action|alink|align|alt|archive|axis|background|bgcolor|border)="
+color brightwhite "(cell(padding|spacing)|char(off|set)?|checked|cite|class(id)?|compact|code(base|tag)?|cols(pan)?)="
+color brightwhite "(content(editable)?|contextmenu|coords|data|datetime|declare|defer|dir|disabled|enctype)="
+color brightwhite "(for|frame(border)?|headers|height|hidden|href(lang)?|hspace|http-equiv|id|ismap)="
+color brightwhite "(label|lang|link|longdesc|margin(height|width)|maxlength|media|method|multiple)="
+color brightwhite "(name|nohref|noresize|noshade|object|onclick|onfocus|onload|onmouseover|profile|readonly|rel|rev)="
+color brightwhite "(rows(pan)?|rules|scheme|scope|scrolling|selected|shape|size|span|src|standby|start|style|summary)="
+color brightwhite "(tabindex|target|text|title|type|usemap|valign|value(type)?|vlink|vspace|width|xmlns|xml:space)="
+
+# Comments
+color brightblack start="<!--" end="-->"

@@ -1,0 +1,21 @@
+## JAVA
+
+syntax "java" "\.java$"
+magic "Java "
+comment "//"
+
+color brightwhite "\<(boolean|byte|char|double|float|int|long|new|short|this|transient|void)\>"
+color brightwhite "\<(break|case|catch|continue|default|do|else|finally|for|if|return|switch|throw|try|while)\>"
+color brightwhite "\<(abstract|class|extends|final|implements|import|instanceof|interface|native)\>"
+color brightwhite "\<(package|private|protected|public|static|strictfp|super|synchronized|throws|volatile)\>"
+color yellow ""[^"]*""
+
+color brightwhite "\<(true|false|null)\>"
+
+# Comments
+color brightblack "//.*"
+color brightblack start="/\*" end="\*/"
+color brightblack start="/\*\*" end="\*/"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

@@ -1,0 +1,51 @@
+## LUA
+
+syntax "lua" "\.lua$"
+magic "Lua script"
+comment "--"
+
+color brightyellow "\[\[.*\]\]"
+
+# Operators
+color brightwhite ":|\*|/|%|\+|-|\^|>|>=|<|<=|~=|=|\.\.|\<(not|and|or)\>"
+
+# Statements
+color brightwhite "\<(do|end|while|repeat|until|if|elseif|then|else|for|in|function|local|return|break)\>"
+
+# Keywords
+color brightwhite "\<(_G|_VERSION|assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|load|loadfile|module|next|pairs|pcall|print|rawequal|rawget|rawlen|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\s*\("
+
+# Standard library
+color brightwhite "\<coroutine\.(create|isyieldable|resume|running|status|wrap|yield)\>"
+color brightwhite "\<debug\.(debug|(get|set)(fenv|hook|local|metatable|(up|user)value)|getinfo|getregistry|traceback|upvalue(id|join))\>"
+color brightwhite "\<io\.(close|flush|input|lines|output|p?open|read|tmpfile|type|write|std(in|out|err))\>"
+color brightwhite "\<math\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|huge|ldexp|log10|log)\>"
+color brightwhite "\<math\.((max|min)(integer)?|modf?|pi|pow|rad|random(seed)?|sinh?|sqrt|tan|tointeger|type|ult)\>"
+color brightwhite "\<os\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)\>"
+color brightwhite "\<package\.(config|cpath|loaded|loadlib|path|preload|searchers|searchpath|seeall)\>"
+color brightwhite "\<string\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|sub|unpack|upper)\>"
+color brightwhite "\<table\.(concat|insert|maxn|move|pack|remove|sort|unpack)\>"
+color brightwhite "\<utf8\.(char|charpattern|codepoint|codes|len|offset)\>"
+
+# File handle methods
+color brightwhite ":(close|flush|lines|read|seek|setvbuf|write)\>"
+
+# External files
+color red "\<(dofile|require)\>"
+
+# Special words
+color brightwhite "\<(false|nil|true)\>"
+
+# Decimal and hexadecimal numbers
+color yellow "\<[0-9]+(\.[0-9]*)?([Ee][+-]?[0-9]+)?\>"
+icolor yellow "\<0x[0-9a-f]+(\.[0-9a-f]*)?(p[+-]?[0-9]+)?\>"
+
+# Shebang
+color brightblack "^#!.*"
+
+# Simple comments and multiline comments
+color brightblack "--.*"
+color brightblack start="--\[\[" end="\]\]"
+
+# Strings
+color yellow ""(\\.|[^"\])*"|'(\\.|[^'\])*'"

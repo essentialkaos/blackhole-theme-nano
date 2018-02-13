@@ -1,0 +1,41 @@
+## OCAML
+
+syntax "ocaml" "\.mli?$"
+magic "OCaml"
+comment "(*|*)"
+
+# Uid
+color green "\<[A-Z][0-9a-z_]{2,}\>"
+
+# Declarations
+color brightwhite "\<(let|val|method|in|and|rec|private|virtual|constraint)\>"
+
+# Structure items
+color brightwhite "\<(type|open|class|module|exception|external)\>"
+
+# Patterns
+color brightwhite "\<(fun|function|functor|match|try|with)\>"
+
+# Pattern modifiers
+color brightwhite "\<(as|when|of)\>"
+
+# Conditions
+color brightwhite "\<(if|then|else)\>"
+
+# Blocks
+color brightwhite "\<(begin|end|object|struct|sig|for|while|do|done|to|downto)\>"
+
+# Constants
+color brightwhite "\<(true|false)\>"
+
+# Modules/classes
+color brightwhite "\<(include|inherit|initializer)\>"
+
+# Expression modifiers
+color brightwhite "\<(new|ref|mutable|lazy|assert|raise)\>"
+
+# Comments
+color brightblack start="\(\*" end="\*\)"
+
+# Strings: (no multiline handling yet)
+color yellow ""[^\"]*""

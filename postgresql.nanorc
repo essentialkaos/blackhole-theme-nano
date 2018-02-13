@@ -1,0 +1,75 @@
+## POSTGRESQL
+
+syntax "sql" "\.sql[2345s~]?$"
+comment "-- "
+
+# Functions
+color blue "\<[a-z_]*\("
+
+# Types
+color brightwhite "\<(int2|smallint|int4|int|integer|int8|bigint|decimal|numeric|real|double precision|(small|big)?serial)\>"
+color brightwhite "\<(bit( varying)?|boolean|bytea|enum|money|tsvector|uuid)\>"
+color brightwhite "\<(char|varchar|character( varying)?|text)\>"
+color brightwhite "\<(date|interval|time(stamp)?( with time zone| without time zone)?)\>"
+color brightwhite "\<(point|line|lseg|path|box|polygon|circle)\>"
+color brightwhite "\<(cidr|inet|macaddr)\>"
+color brightwhite "\<(daterange|int4range|int8range|numrange|tsrange|tstzrange)\>"
+
+# Structure
+color brightyellow "\<(CASE|CLASS|DEFAULT|DO|ELSE|ELSEIF|FOR|FOREACH|FUNCTION|IF|IS NULL)\>"
+color brightyellow "\<(NEW|PRIVATE|PUBLIC|RETURN|RETURNS|SETOF|SWITCH|THEN|WHEN|WHILE)>"
+
+# Control flow
+color brightwhite "\<(EXCEPTION|NOTICE|RAISE|RETURN)\>"
+
+# SQL keywords
+color brightwhite "\<(ABORT|AGGREGATE|ALTER|ANALYZE|AND|AS|AUTHORIZATION|BEGIN|CAST|CHECKPOINT|CLASS|CLOSE)\>"
+color brightwhite "\<(CLUSTER|COLLATION|COMMENT|COMMIT|CONFIGURATION|CONSTRAINTS|CONVERSION|COPY|CREATE)\>"
+color brightwhite "\<(DATA|DATABASE|DEALLOCATE|DECLARE|DEFAULT|DELETE|DICTIONARY|DISCARD|DO|DOMAIN|DROP)\>"
+color brightwhite "\<(END|EVENT|EXECUTE|EXPLAIN|EXTENSION|FAMILY|FETCH|FOREIGN|FROM|FUNCTION)\>"
+color brightwhite "\<(GRANT|GROUP|IF NOT EXISTS|IMMUTABLE|INDEX|INSERT|INTO|LABEL|LANGUAGE|LARGE|LOAD|LOCK)\>"
+color brightwhite "\<(MAPPING FOR|MATERIALIZED|MOVE|NOTIFY|OBJECT|OPERATOR|OPTIONS|OWNED|OWNER)\>"
+color brightwhite "\<(PARSER|PREPARED?|PRIVILEGES|REASSIGN|REFRESH|RELEASE|RESET|REVOKE|ROLE|ROLLBACK|RULE)\>"
+color brightwhite "\<(SAVEPOINT|SCHEMA|SEARCH|SECURITY|SELECT|SEQUENCE|SERVER|SESSION|SET|SHOW|SPACE|START|SYSTEM)\>"
+color brightwhite "\<(TABLE|TEXT|TO|TRANSACTION|TYPE|UPDATE|USER|VACUUM|VALUES|VIEW|WHERE|WITH|WRAPPER)\>"
+
+# Strings
+color yellow "<[^=       ]*>" ""(\.|[^"])*""
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"
+
+# Regular expressions
+color magenta "/([^/]|(\\/))*/[iomx]*" "%r\{([^}]|(\\}))*\}[iomx]*"
+
+# Shell command expansion is in `backticks` or like %x{this}.  These are
+# "double-quotish" (to use a perlism).
+color blue "`[^`]*`" "%x\{[^}]*\}"
+
+# Strings double-quoted
+color yellow ""([^"]|(\\"))*"" "%[QW]?\{[^}]*\}" "%[QW]?\([^)]*\)" "%[QW]?<[^>]*>"
+color yellow "%[QW]?\[[^]]*\]" "%[QW]?\$[^$]*\$" "%[QW]?\^[^^]*\^" "%[QW]?![^!]*!"
+
+# Expression substitution.  These go inside double-quoted strings,
+# "like #{this}".
+color cyan "#\{[^}]*\}"
+
+# Strings, single-quoted
+color yellow "'([^']|(\\'))*'" "%[qw]\{[^}]*\}" "%[qw]\([^)]*\)" "%[qw]<[^>]*>"
+color yellow "%[qw]\[[^]]*\]" "%[qw]\$[^$]*\$" "%[qw]\^[^^]*\^" "%[qw]![^!]*!"
+
+# Comments
+color brightblack "#[^{].*$" "#$"
+color brightblack "--[^{].*$" "#$"
+color brightblack "##[^{].*$" "##$"
+color brightblack "//.*"
+color brightblack start="/\*" end="\*/"
+
+# PostgreSQL markings
+color red "(--)"
+
+# PostgreSQL default schemas
+color brightred "(pg_catalog|public)"
+
+# PostgreSQL PLs
+color brightblue "(pljava|plperlu?|plpgsql|plpy|plpythonu?|plr|plruby|plsh|pltcl|plscheme)"

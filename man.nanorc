@@ -1,0 +1,18 @@
+## MAN
+
+syntax "man" "\.[1-9]x?$"
+magic "troff or preprocessor input"
+comment ".\""
+
+color brightwhite "\.(SH|SS|TH) .*$"
+color brightwhite "\.(SH|SS|TH) " "\.([HIT]P)"
+color brightwhite "\.(B[IR]?|I[BR]?|R[BI]|S[BM]) .*$"
+color brightwhite "\.(B[IR]?|I[BR]?|R[BI]|S[BM]) " "\.([LP]?P)$"
+color brightwhite "\\f[BIPR]"
+color brightwhite "\.(br|DT|RS|RE|PD)"
+
+# Comments
+color brightblack "\.?\\\".*$"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

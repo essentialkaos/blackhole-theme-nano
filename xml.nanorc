@@ -1,0 +1,19 @@
+## XML
+
+syntax "xml" "\.([jrsx]html?|jnlp|mml|pom|rng|sgml?|svg|w[as]dl|wsdd|xjb|xml|xs(d|lt?)|xul)$"
+header "<\?xml.*version=.*\?>"
+magic "(XML|SGML) (sub)?document"
+comment "<!--|-->"
+
+# The entire content of the tag
+color brightwhite start="<" end=">"
+
+# The strings inside the tag
+color yellow "\"[^"]*\""
+
+# Comments
+color brightblack start="<!DOCTYPE" end="[/]?>"
+color brightblack start="<!--" end="-->"
+
+# Escapes
+color cyan "&[^;]*;"

@@ -1,0 +1,32 @@
+## AUTOCONF
+
+syntax "autoconf" "\.(ac|m4)$"
+comment "#"
+
+# Keywords
+color brightwhite "\<(if|test|then|elif|else|fi|for|in|do|done)\>"
+color brightwhite "(=|!=|&&|\|\|)"
+
+# Macros
+color cyan "\<[[:upper:]_[:digit:]]+\>"
+
+# Version numbers
+color green "\<[-_.0-9]+\>"
+
+# Strings
+color yellow "\"[^"]*\""  "\'[^']*\'"
+
+# Backticks
+color brightwhite "`[^`]*`"
+
+# Error lines
+color brightred "^\*\*\*.*"
+
+# Brackets
+color brightwhite "\[|\]|\(|\)"
+
+# Comments
+color brightblack "^[[:blank:]]*#.*"  "\<dnl.*"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

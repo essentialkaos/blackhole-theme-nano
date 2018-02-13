@@ -1,0 +1,24 @@
+## CMAKE
+
+syntax "cmake" "(CMakeLists\.txt|\.cmake)$"
+comment "#"
+
+icolor green "^[[:space:]]*[A-Z0-9_]+"
+
+icolor brightwhite "^[[:space:]]*(include|include_directories|include_external_msproject)\>"
+
+icolor brightwhite "^[[:space:]]*((else|end)?if|else|(end)?while|(end)?foreach|break)\>"
+color brightwhite "\<(NOT|COMMAND|POLICY|TARGET|EXISTS|IS_(DIRECTORY|ABSOLUTE)|DEFINED)[[:space:]]"
+color brightwhite "[[:space:]](OR|AND|IS_NEWER_THAN|MATCHES|(STR|VERSION_)?(LESS|GREATER|EQUAL))[[:space:]]"
+
+icolor brightwhite "^[[:space:]]*((end)?(function|macro)|return)"
+
+icolor cyan start="\$(\{|ENV\{)" end="\}"
+
+color magenta "\<(APPLE|UNIX|WIN32|CYGWIN|BORLAND|MINGW|MSVC(_IDE|60|71|80|90)?)\>"
+
+icolor brightblack "^([[:space:]]*)?#.*"
+icolor brightblack "[[:space:]]#.*"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

@@ -1,0 +1,30 @@
+## SHELL
+
+syntax "sh" "\.sh$"
+header "^#!.*((ba|da|k|pdk)?sh[-0-9_]*|openrc-run|runscript)"
+magic "(POSIX|Bourne-Again) shell script.*text"
+linter dash -n
+comment "#"
+
+icolor blue "^[0-9A-Z_]+\(\)"
+color brightwhite "\<(break|case|continue|do|done|elif|else|esac|exit|fi|for|function|if|in|read|return|select|shift|then|time|until|while|unset)\>"
+color brightwhite "\<(declare|eval|exec|export|let|local)\>"
+color brightwhite "[{}():;|`$<>!=&\\]" "(\]|\[)"
+color brightwhite "-[Ldefgruwx]\>"
+color brightwhite "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+color red "\<(awk|cat|cd|ch(grp|mod|own)|cp|echo|env|grep|install|ln|make|mkdir|mv|popd|printf|pushd|rm|rmdir|sed|set|tar|touch|umask|basename|dirname|type)\>"
+
+# Strings
+color yellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+
+# Basic variable names (no braces)
+color green "\$[-0-9@*#?$!]" "\$[[:alpha:]_][[:alnum:]_]*"
+
+# More complicated variable names; handles braces and replacements and arrays
+color green "\$\{[#!]?([-@*#?$!]|[0-9]+|[[:alpha:]_][[:alnum:]_]*)(\[([[:space:]]*[[:alnum:]_]+[[:space:]]*|@)\])?(([#%/]|:?[-=?+])[^}]*\}|\[|\})"
+
+# Comments
+color brightblack "(^|[[:space:]])#.*$"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

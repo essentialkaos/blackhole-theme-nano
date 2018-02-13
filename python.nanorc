@@ -1,0 +1,37 @@
+## PYTHON
+
+syntax "python" "\.py$"
+header "^#!.*python[-0-9._]*"
+magic "Python script"
+comment "#"
+
+linter pyflakes
+
+# Function definitions
+icolor blue "def [0-9A-Z_]+"
+
+# Keywords
+color brightwhite "\<(and|as|assert|async|await|break|class|continue)\>"
+color brightwhite "\<(def|del|elif|else|except|exec|finally|for|from)\>"
+color brightwhite "\<(global|if|import|in|is|lambda|nonlocal|not|or)\>"
+color brightwhite "\<(pass|print|raise|return|try|while|with|yield)\>"
+
+# Single-quoted strings
+color yellow "'([^'\]|\\.)+'"
+color yellow ""([^"\]|\\.)+""
+
+# Comments
+color brightblack "(^|[[:blank:]])#.*$"
+
+# Triple-quoted strings
+color yellow    start="'''([^'),]|$)" end="(^|[^(\])'''"
+color yellow start="\"\"\"([^"),]|$)" end="(^|[^(\])\"\"\""
+
+# Special values
+color brightwhite "\<(False|None|True)\>"
+
+# Reminders
+color brightwhite,yellow "(FIXME|TODO|XXX)"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

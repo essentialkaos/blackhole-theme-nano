@@ -1,0 +1,27 @@
+## PATCH
+
+syntax "patch" "\.(patch|diff|debdiff)$"
+magic "diff output"
+comment ""
+
+# Added lines
+color brightgreen "^\+.*"
+# Show trailing whitespace only on added lines
+color ,green "[[:space:]]+$"
+# Context lines
+color brightblack "^ .*"
+# Deleted lines
+color brightred "^-.*"
+
+# Header lines
+color magenta "^(Index:|diff|index|new file mode)[[:blank:]].*"
+
+# File names and dates
+color red "^---.*"
+color green "^\+\+\+.*"
+
+# Line numbers
+color brightwhite "^@@.*"
+
+# Statistics
+color cyan start="^---$" end="^$"

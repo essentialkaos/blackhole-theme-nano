@@ -1,0 +1,44 @@
+## AWK
+
+syntax "awk" "\.awk$"
+magic "awk script"
+comment "#"
+
+# Records
+icolor green "\$[0-9A-Z_!@#$*?-]+"
+
+# Awk-set variables.
+color brightwhite "\<(ARGC|ARGIND|ARGV|BINMODE|CONVFMT|ENVIRON|ERRNO|FIELDWIDTHS)\>"
+color brightwhite "\<(FILENAME|FNR|FS|IGNORECASE|LINT|NF|NR|OFMT|OFS|ORS)\>"
+color brightwhite "\<(PROCINFO|RS|RT|RSTART|RLENGTH|SUBSEP|TEXTDOMAIN)\>"
+
+# Function declarations and special patterns
+color red "\<(function|extension|BEGIN|END)\>"
+
+# Operators
+color brightwhite "(\{|\}|\(|\)|\;|\]|\[|\\|<|>|!|=|&|\+|-|\*|%|/|\?:|\^|\|)"
+
+# Flow control
+color brightwhite "\<(for|if|while|do|else|in|delete|exit)\>"
+color brightwhite "\<(break|continue|return)\>"
+
+# I/O statements
+color red "\<(close|getline|next|nextfile|print|printf)\>"
+color red "\<(system|fflush)\>"
+
+# Standard functions
+color red "\<(atan2|cos|exp|int|log|rand|sin|sqrt|srand)\>"
+color red "\<(asort|asorti|gensub|gsub|index|length|match)\>"
+color red "\<(split|sprintf|strtonum|sub|substr|tolower|toupper)\>"
+color red "\<(mktime|strftime|systime)\>"
+color red "\<(and|compl|lshift|or|rshift|xor)\>"
+color red "\<(bindtextdomain|dcgettext|dcngettext)\>"
+
+# Strings
+color yellow "<[^= 	]*>" ""(\\.|[^"])*""
+
+# Comments
+color brightblack "(^|[[:space:]])#.*$"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

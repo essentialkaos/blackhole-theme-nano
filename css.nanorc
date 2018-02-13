@@ -1,0 +1,17 @@
+## CSS
+
+syntax "css" "\.css$"
+comment "/*|*/"
+
+color brightwhite "."
+color brightwhite start="\{" end="\}"
+color brightwhite start=":" end="([;^\{]|$)"
+color brightblue  ":active|:focus|:hover|:link|:visited|:link|:after|:before|$"
+
+color brightwhite ";|:|\{|\}"
+
+# Comments
+color brightblack    start="\/\*" end="\\*/"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

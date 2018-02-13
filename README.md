@@ -4,7 +4,9 @@
 
 ### Screenshots
 
-![Screenshot](https://gh.kaos.st/blackhole-nano.png)
+![Screenshot](https://gh.kaos.st/blackhole-nano-1.png)
+
+![Screenshot](https://gh.kaos.st/blackhole-nano-2.png)
 
 ### Install
 

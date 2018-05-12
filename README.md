@@ -1,6 +1,6 @@
 ## `BLACKHOLE` Theme for Nano
 
-<p align="center"><a href="#readme"><img src="https://gh.kaos.io/blackhole.jpg"/></a></p>
+<p align="center"><a href="#readme"><img src="https://gh.kaos.st/blackhole.jpg"/></a></p>
 
 ### Screenshots
 
@@ -18,4 +18,4 @@
 
 [EKOL](https://essentialkaos.com/ekol)
 
-<p align="center"><a href="https://essentialkaos.com"><img src="https://gh.kaos.io/ekgh.svg"/></a></p>
+<p align="center"><a href="https://essentialkaos.com"><img src="https://gh.kaos.st/ekgh.svg"/></a></p>

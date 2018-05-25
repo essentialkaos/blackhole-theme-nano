@@ -1,0 +1,17 @@
+syntax "YUM" "\.repo$|yum.*\.conf$"
+
+# Values
+color blue "^[[:space:]]*[^=]*="
+
+# Headers
+color yellow "^[[:space:]]*\[.*\]$"
+
+# Variables
+color brightgreen "\$(releasever|arch|basearch|uuid|YUM[0-9])"
+
+# Comments
+color brightblack "(^|[[:space:]])#([^{].*)?$"
+
+# Validation
+color ,green "[[:space:]]+$"
+color ,red "  + +| +  +"

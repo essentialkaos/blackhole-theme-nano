@@ -9,7 +9,7 @@ color brightblack "(^|[[:space:]])(#([^{].*)?|;.*)$"
 color yellow "^[[:space:]]*\[.*\]$"
 
 # Values
-color brightblue "^[[:space:]]*[^:]*:"
+color blue "^[[:space:]]*[^:]*:"
 
 # Macro
 color brightgreen "\{[A-Za-z0-9_-]{1,}:[A-Za-z0-9_-]{1,}\}"

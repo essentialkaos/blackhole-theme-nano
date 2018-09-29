@@ -3,9 +3,6 @@
 syntax "go" "\.go$"
 comment "//"
 
-# Set up a formatter since spelling is probably useless...
-formatter gofmt -w
-
 # Functions
 color blue "\<func ([a-zA-Z_0-9]+)\>"
 

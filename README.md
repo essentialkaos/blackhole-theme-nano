@@ -1,4 +1,4 @@
-## `BLACKHOLE` Theme for Nano
+## BLACKH⚫LE Theme for Nano
 
 <p align="center"><a href="#readme"><img src="https://gh.kaos.st/blackhole.jpg"/></a></p>
 

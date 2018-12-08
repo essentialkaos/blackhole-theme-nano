@@ -1,0 +1,16 @@
+## DEFAULT
+
+syntax "default"
+comment "#"
+
+# Strings
+color yellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+
+# Octal, decimal, float and hexadecimal numbers
+color brightyellow "\<[0-9\.]+\>" "\<0x[0-9A-Fa-f]+\>"
+
+# Comments
+color brightblack "(^|[[:space:]])#.*$"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

@@ -24,12 +24,12 @@ color brightwhite "\<(package|import)\>"
 color brightwhite "//[[:space:]]*\+build[[:space:]]+(([a-zA-Z_0-9]+[[:space:]]*)+,[[:space:]]*)*[a-zA-Z_0-9]+"
 
 # Literals
-color yellow "\<0([0-7]*|[xX][0-9a-fA-F]+)\>"
-color yellow "(\<0+|\B)\.[0-9]+([Ee][+-]?[0-9]+)?i?\>"
-color yellow "\<[1-9][0-9]*(\.[0-9]*)?([Ee][+-]?[0-9]+)?i?\>"
+color brightyellow "\<0([0-7]*|[xX][0-9a-fA-F]+)\>"
+color brightyellow "(\<0+|\B)\.[0-9]+([Ee][+-]?[0-9]+)?i?\>"
+color brightyellow "\<[1-9][0-9]*(\.[0-9]*)?([Ee][+-]?[0-9]+)?i?\>"
 
 # Strings and characters; slightly fuzzy
-color yellow "\<(true|false|nil|iota|_)\>"
+color brightwhite "\<(true|false|nil|iota|_)\>"
 color yellow "'(\\.|[^'])+'"
 color yellow ""(\\.|[^"])*""
 color yellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""

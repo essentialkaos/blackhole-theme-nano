@@ -13,8 +13,8 @@ color brightwhite "\<(await|export|import|throw|try|catch|finally|new|delete)\>"
 # "Exit" points
 color brightwhite "\<(break|continue|return|yield)\>"
 
-# Octal/decimal and hexadecimal numbers
-color cyan "\<[0-9]+\>" "\<0x[0-9A-Fa-f]+\>"
+# Octal, decimal, float and hexadecimal numbers
+color brightyellow "\<[0-9\.]+\>" "\<0x[0-9A-Fa-f]+\>"
 
 # Strings
 color yellow ""(\\.|[^"])*"" "'(\\.|[^'])*'" "`(\\.|[^`])*`"

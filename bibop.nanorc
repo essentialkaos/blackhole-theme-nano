@@ -1,0 +1,24 @@
+## Bibop Recipe
+
+syntax "bibop" "\.recipe$"
+comment "#"
+
+# Comments
+color brightblack "(^|[[:space:]])(#([^{].*)?|;.*)$"
+
+# Strings
+color yellow "'(\\.|[^'])+'"
+color yellow ""(\\.|[^"])*""
+color yellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
+
+# Keywords
+color brightwhite "^(dir|require-root|unsafe-actions)"
+color red "^action"
+
+# Variables
+color green "^var ([a-zA-Z0-9_-]{1,})"
+color brightwhite "^var"
+color brightgreen "\{[a-zA-Z0-9_-]{1,}\}"
+
+# Trailing whitespace
+color ,black "[[:space:]]+$"

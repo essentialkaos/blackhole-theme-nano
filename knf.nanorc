@@ -1,3 +1,5 @@
+## KNF
+
 syntax "knf" "\.knf$"
 header "^\[[A-Za-z]+\]$"
 comment "#"

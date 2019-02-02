@@ -11,7 +11,7 @@
 ### Install
 
 1. Download or checkout this repository;
-2. Copy nanorc file into `/usr/share/nano` directory;
+2. Copy nanorc files into `/usr/share/nano` directory;
 3. Restart nano.
 
 ### License

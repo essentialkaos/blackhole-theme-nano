@@ -12,7 +12,7 @@ color yellow ""(\\.|[^"])*""
 color yellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
 # Keywords
-color brightwhite "^(dir|require-root|unsafe-actions|fast-finish)"
+color brightwhite "^(dir|require-root|unsafe-actions|fast-finish|pkg)"
 color red "^(command):*([a-z0-9]*)"
 color brightred "^(command)"
 

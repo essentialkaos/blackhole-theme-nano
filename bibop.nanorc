@@ -13,7 +13,7 @@ color yellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
 # Keywords
 color brightwhite "^(require-root|unsafe-actions|fast-finish|lock-workdir|delay|ubuffer|https-skip-verify|pkg)"
-color red "^\+*command:*([a-z0-9]*)"
+color red "^\+*command:*([\w_-@]*)"
 color brightred "^\+*command"
 
 # Variables

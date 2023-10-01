@@ -1,0 +1,13 @@
+## INI
+
+syntax "ini" "\.ini$"
+comment ";"
+
+# Properties
+color blue "^[[:space:]]*[^= ]+"
+
+# Headers
+color yellow "^[[:space:]]*\[.*\]$"
+
+# Comments
+color brightblack "(^|[[:space:]])(;([^{].*)?|;.*)$"

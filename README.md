@@ -1,12 +1,12 @@
 ## BLACKH⚫LE Theme for Nano
 
-<p align="center"><a href="#readme"><img src="https://gh.kaos.st/blackhole.jpg"/></a></p>
+<p align="center"><a href="#readme"><img src=".github/images/card.jpg"/></a></p>
 
 ### Screenshots
 
-![Screenshot](https://gh.kaos.st/blackhole-nano-1.png)
+![Screenshot](.github/images/blackhole-nano-1.png)
 
-![Screenshot](https://gh.kaos.st/blackhole-nano-2.png)
+![Screenshot](.github/images/blackhole-nano-2.png)
 
 ### Install
 

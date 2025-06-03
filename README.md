@@ -1,4 +1,4 @@
-## BLACKH⚫LE Theme for Nano
+## 𝗕𝗟𝗔𝗖𝗞𝗛⬤𝗟𝗘 Theme for Nano
 
 <p align="center"><a href="#readme"><img src=".github/images/card.jpg"/></a></p>
 
